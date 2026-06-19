@@ -1,0 +1,27 @@
+{
+  "name": "mobilephotoapp",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "ts:check": "tsc"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "base64-arraybuffer": "^1.0.2",
+    "expo": "~54.0.0",
+    "expo-image-picker": "~16.0.0",
+    "expo-notifications": "~0.32.17",
+    "expo-status-bar": "~2.0.0",
+    "react": "19.1.0",
+    "react-native": "0.81.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@types/react": "~19.0.0",
+    "typescript": "~5.9.2"
+  },
+  "private": true
+}
