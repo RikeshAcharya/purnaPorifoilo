@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://acharyabridhauddhyam.com.np/sitemap.xml
