@@ -876,9 +876,9 @@ async function handleSubmit(event) {
   };
 
   try {
-    // Crucial: Replace 'your_table_name' with your exact Supabase table name
+    // Crucial: Replace 'contact_messages' with your exact Supabase table name
     const { error } = await client
-      .from('your_table_name') 
+      .from('contact_messages') 
       .insert([payload]);
 
     if (error) throw error;
