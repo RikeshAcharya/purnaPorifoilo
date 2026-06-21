@@ -1,7 +1,11 @@
 import { createClient } from '@supabase/supabase-js';
 
-// Hardcode your strings directly here for the mobile bundle
-const SUPABASE_URL = 'https://rxsionpqvqdkttmgzsqw.supabase.co'; 
-const SUPABASE_ANON_KEY = 'sb_publishable_F_K5A2_cFLC-UkkL05DNhg_eOxaXFlf';
+// Expo reads these directly from your local .env file during development
+const SUPABASE_URL = process.env.EXPO_PUBLIC_SUPABASE_URL;
+const SUPABASE_ANON_KEY = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY;
 
-export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
+  console.warn("Supabase environment variables are missing!");
+}
+
+export const supabase = createClient(SUPABASE_URL || '', SUPABASE_ANON_KEY || '');

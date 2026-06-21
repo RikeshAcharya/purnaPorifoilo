@@ -816,5 +816,52 @@ function handleSubmit(e) {
   }, 400);
 }
 </script>
+<script>
+// Captures submission event, stops browser refresh, and posts to Supabase
+async function handleSubmit(event) {
+  event.preventDefault();
+
+  const successAlert = document.getElementById('form-success');
+  const errorAlert = document.getElementById('form-error');
+  const submitButton = document.getElementById('f-submit-btn');
+
+  // Hide any previous messages
+  successAlert.style.display = 'none';
+  errorAlert.style.display = 'none';
+  submitButton.disabled = true;
+
+  // Retrieve input data from inputs
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const subject = document.getElementById('subject').value;
+  const message = document.getElementById('message').value;
+
+  try {
+    // Inserts row structure directly into your Supabase data cluster
+    const { data, error } = await supabase
+      .from('messages') // Assumes your database table is named 'messages'
+      .insert([
+        { 
+          full_name: name, 
+          email_address: email, 
+          subject: subject, 
+          detailed_message: message,
+          created_at: new Date().toISOString()
+        }
+      ]);
+
+    if (error) throw error;
+
+    // Display localized success confirmation UI context
+    successAlert.style.display = 'block';
+    document.getElementById('contact-form').reset();
+  } catch (err) {
+    console.error('Supabase payload transaction failed:', err);
+    errorAlert.style.display = 'block';
+  } finally {
+    submitButton.disabled = false;
+  }
+}
+</script>
 </body>
 </html>
