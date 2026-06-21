@@ -132,7 +132,6 @@
     overflow-x: hidden; line-height: 1.7; -webkit-font-smoothing: antialiased;
   }
 
-  /* Dynamic Reading Progress Bar */
   #scroll-progress {
     position: fixed; top: 0; left: 0; height: 4px; background: linear-gradient(to right, var(--accent), var(--platform-brand));
     width: 0%; z-index: 1002; transition: width 0.1s linear;
@@ -162,7 +161,6 @@
   }
   .nav-links a:hover { color: var(--accent); }
     
-  /* Language Switcher Button */
   .lang-btn {
     background: var(--accent); color: #fff; border: none; padding: 10px 20px; 
     border-radius: 20px; font-weight: 600; 
@@ -171,7 +169,6 @@
   }
   .lang-btn:hover { background: var(--accent-light); transform: translateY(-1px); }
 
-  /* Mobile UI Hamburger */
   .menu-toggle {
     display: none; flex-direction: column; gap: 6px; cursor: pointer; background: none; border: none; z-index: 1001;
   }
@@ -207,7 +204,6 @@
   .hero-subtitle { font-size: 1.1rem; color: var(--ink-light); margin-bottom: 24px; font-weight: 500; }
   .hero-desc { font-size: 1.05rem; color: var(--ink-muted); max-width: 580px; margin-bottom: 40px; }
 
-  /* Hero Action Buttons */
   .hero-actions { display: flex; gap: 20px; flex-wrap: wrap; }
   .hero-btn {
     padding: 16px 36px; border-radius: var(--radius); font-size: 0.9rem; font-weight: 700;
@@ -219,7 +215,6 @@
   .hero-btn-contact { background: transparent; color: var(--contact-brand); border: 2px solid var(--contact-brand); }
   .hero-btn-contact:hover { background: rgba(183,28,28,0.04); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(183,28,28,0.15); }
 
-  /* Dynamic Profile Card Container */
   .hero-image-wrapper { display: flex; justify-content: center; }
   .interactive-profile-card {
     position: relative; width: 330px; height: 380px; background: var(--paper);
@@ -229,7 +224,6 @@
   .interactive-profile-card:hover { transform: translateY(-5px); box-shadow: 0 40px 75px rgba(30,86,49,0.12); }
   .profile { width: 100%; height: 100%; object-fit: cover; border-radius: calc(var(--radius) - 4px); }
 
-  /* Live Clock Widget inside Hero */
   .live-widget {
     margin-top: 32px; display: inline-flex; align-items: center; gap: 12px;
     background: rgba(252,253,252,0.6); padding: 8px 16px; border-radius: 30px;
@@ -319,7 +313,6 @@
   .contact-text-frame a { color: inherit; text-decoration: none; }
   .fb-icon { width: 22px; height: 22px; fill: var(--contact-brand); }
 
-  /* Executive Interactive Form */
   .executive-form {
     background: var(--paper); padding: 40px; border-radius: var(--radius);
     border: 1px solid var(--border); box-shadow: 0 20px 45px rgba(0,0,0,0.03); display: grid; gap: 24px;
@@ -363,7 +356,6 @@
   .footer-links a { color: #94a3b8; text-decoration: none; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; transition: var(--transition); }
   .footer-links a:hover { color: #fff; }
 
-  /* Back To Top UI Component */
   #back-top {
     position: fixed; bottom: 32px; right: 32px; width: 48px; height: 48px;
     background: var(--ink); color: #fff; border: none; border-radius: 50%;
@@ -427,7 +419,7 @@
   <section class="hero show">
     <div class="hero-content">
       <p class="hero-eyebrow" id="hero-eyebrow-txt">कर्णाली प्रदेशको पर्यटन — नेपाल</p>
-      <h1 id="hero-name-target">Purna Prasad <span>Acharya</span></h1>
+      <h1 id="hero-name-target">पूर्ण प्रसाद <span>आचार्य</span></h1>
       <p class="hero-subtitle" id="hero-subtitle-txt">बहुउद्देश्यीय पर्यटन आयोजना — जुम्ला क्लस्टर</p>
       <p class="hero-desc" id="hero-desc-txt">कर्णाली प्रदेशको प्राचीन र प्राकृतिक परिदृश्यहरूमा विकेन्द्रीकृत, समुदायमा आधारित पर्यावरण-पर्यटन अनुभवहरू र उच्च प्रतिफल दिने आतिथ्य पूर्वाधारको विकास।</p>
        
@@ -475,7 +467,7 @@
         <p id="p3-d">दुर्गम क्षेत्रका ट्रेकिङ ट्र्याकहरूमा संरचनात्मक प्रतिफलहरू पारदर्शी रूपमा वितरण गर्ने।</p>
       </div>
       <div class="pillar">
-        <h4 id="p4-t">조खिम प्रतिरोध</h4>
+        <h4 id="p4-t">जोखिम प्रतिरोध</h4>
         <p id="p4-d">दुर्गम मार्गहरूमा सुरक्षा, नेभिगेसन, र चिकित्सा प्रतिक्रियाको आधारभूत मापदण्डहरू तयार गर्ने।</p>
       </div>
     </div>
@@ -499,7 +491,7 @@
     <div class="platform-card">
       <div>
         <h3 id="card2-title">विकेन्द्रीकृत होमस्टेहरू</h3>
-        <p id="card2-desc">जुम्लाका ग्रामीण समुदायहरूलाई सिधै अन्तर्राष्ट्रिय ट्रेकिङ सञ्जालहरूसँग जोड्ने परिचालन समन्वय इन्टरफेस।</p>
+        <p id="card2-desc">जुम्लाका rural समुदायहरूलाई सिधै अन्तर्राष्ट्रिय ट्रेकिङ सञ्जालहरूसँग जोड्ने परिचालन समन्वय इन्टरफेस।</p>
       </div>
       <a href="https://acharyabridhauddhyam.com.np/" target="_blank" class="platform-card-btn" id="ph-btn2">पूर्वाधार नेटवर्क हेर्नुहोस् →</a>
     </div>
@@ -526,7 +518,7 @@
         <div class="contact-icon-frame">📍</div>
         <div class="contact-text-frame">
           <h5 id="ct-c1-t">क्षेत्रीय</h5>
-          <span>जुम्ला, कर्णाली प्रदेश, नेपाल</span>
+          <span id="ct-c1-d">जुम्ला, कर्णाली प्रदेश, नेपाल</span>
         </div>
       </div>
        
@@ -603,7 +595,9 @@
 <button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 
 <script>
-// Translation Engine Data
+// Dynamic Global State
+let currentLang = "ne";
+
 const TRANSLATIONS = {
   ne: {
     langBtn: "English",
@@ -620,247 +614,243 @@ const TRANSLATIONS = {
     p2t: "सम्पदा अखण्डता", p2d: "क्षेत्रीय पहिचानलाई जोगाउने वास्तुकला मोडेलहरूलाई प्रोत्साहन गर्ने।",
     p3t: "न्यायोचित अर्थतन्त्र", p3d: "दुर्गम क्षेत्रका ट्रेकिङ ट्र्याकहरूमा संरचनात्मक प्रतिफलहरू पारदर्शी रूपमा वितरण गर्ने।",
     p4t: "जोखिम प्रतिरोध", p4d: "दुर्गम मार्गहरूमा सुरक्षा, नेभिगेसन, र चिकित्सा प्रतिक्रियाको आधारभूत मापदण्डहरू तयार गर्ने।",
-    phLabel: "परिचालन पूर्वाधार", phTitle: "प्रोजेक्ट प्लेटफर्म", phDesc: "पश्चिम नेपालको आतिथ्य संरचनाका लागि डाटा इन्जिन, लजिस्टिक रुटिङ संयन्त्र, र स्थानीयकृत उद्यम समाधानहरू परिचालन गर्दै।",
+    phLabel: "परिचालन पूर्वाधार", phTitle: "प्रोजेक्ट प्लेटफर्म", phDesc: "पश्चिम नेपालको आतिथ्य संरचनाका लागि डाटा इन्जिन, लजिस्टिक रुटिङ संयन्त्र, र स्थानीयकृत उद्यम समाधानहरू परिचालन गर्दै.",
     card1Title: "आचार्य वृद्ध उद्यम", card1Desc: "क्षेत्रीय लगानी, पदमार्ग विकास, र दिगोपनका सूचकहरू ट्र्याक गर्ने केन्द्रीकृत इकोसिस्टम अनुगमन केन्द्र।",
     card2Title: "विकेन्द्रीकृत होमस्टेहरू", card2Desc: "जुम्लाका ग्रामीण समुदायहरूलाई सिधै अन्तर्राष्ट्रिय ट्रेकिङ सञ्जालहरूसँग जोड्ने परिचालन समन्वय इन्टरफेस।",
     phBtn1: "लाइभ गेटवे खोल्नुहोस् →", phBtn2: "पूर्वाधार नेटवर्क हेर्नुहोस् →",
     glLabel: "भिजुअल अभिलेख", glTitle: "अभियान ग्यालेरी",
     ctLabel: "कार्यकारी सञ्चार", ctTitle: "सम्पर्कमा आउनुहोस्", ctDesc: "यदि तपाईं क्षेत्रीय पर्यटन परामर्श समन्वय गर्न वा विशिष्ट इको-ट्रेलहरू बारे सोधपुछ गर्न चाहनुहुन्छ भने, कृपया आफ्नो विवरण तल पेश गर्नुहोस्।",
-    ctC1t: "क्षेत्रीय", ctC2t: "आधिकारिक पोर्टल", ctC3t: "सार्वजनिक सभा जडान", fbText: "फेसबुक पेजहरू",
+    ctC1T: "क्षेत्रीय", ctC1D: "जुम्ला, कर्णाली प्रदेश, नेपाल", ctC2T: "आधिकारिक पोर्टल", ctC3T: "सार्वजनिक सभा जडान", fbText: "फेसबुक पेजहरू",
     fName: "पूरा नाम", fEmail: "इमेल ठेगाना", fSub: "समन्वयको विषय", fOptDef: "— रणनीतिक क्षेत्र चयन गर्नुहोस् —",
-    fOpt1: "कर्णाली प्रदेश पर्यटन रणनीति", fOpt2: "अभियान परामर्श", fOpt3: "सामान्य सोधपुछ", fMsg: "विस्तृत सन्देश", fSubmit: "सन्देश पठाउनुहोस्",
+    fOpt1: "कर्णाली प्रदेश पर्यटन रणनीति", fOpt2: "अभियान परामर्श", fOpt3: "सामान्य सोधपुछ", fMsg: "विस्तृत सन्देश",
+    fSubmit: "सन्देश पठाउनुहोस्",
     fSuccess: "प्रणाली सूचना: सन्देश सुरक्षित रूपमा पठाइयो र डाटाबेसमा सुरक्षित गरियो। धन्यवाद।",
     fError: "त्रुटि: डाटा पठाउन असमर्थ। कृपया सर्भर चलिरहेको सुनिश्चित गर्नुहोस्।",
-    pName: "जस्तै: राम बहादुर", pMsg: "तपाईंको सन्देशको रूपरेखा यहाँ लेख्नुहोस्...",
-    ftCopy: "© २०२६ पूर्ण प्रसाद आचार्य · जुम्ला, नेपाल"
+    gCaption1: "रारा ताल ट्रेक रूट", gCaption2: "जुम्ला क्षेत्र अर्गानिक कृषि फार्म", gCaption3: "परम्परागत कर्णाली सामुदायिक होमस्टे"
   },
   en: {
     langBtn: "नेपाली",
     heroName: 'Purna Prasad <span>Acharya</span>',
     navMission: "Mission", navPlatform: "Platform", navGallery: "Gallery", navContact: "Contact",
-    heroEyebrow: "Tourism of Karnali Province — Nepal",
-    heroSubtitle: "Multipurpose Tourism Project — Jumla Cluster",
-    heroDesc: "Developing decentralized, community-based eco-tourism experiences and high-yield hospitality infrastructure across pristine and natural landscapes of Karnali Province.",
+    heroEyebrow: "Karnali Province Tourism — Nepal", heroSubtitle: "Multi-Purpose Tourism Project — Jumla Cluster",
+    heroDesc: "Developing decentralized, community-based eco-tourism experiences and high-yield hospitality infrastructure across the pristine landscapes of Karnali Province.",
     heroBtnP: "Launch Platform ↗", heroBtnC: "Get In Touch ↓", clockLabel: "Jumla, Nepal Local Time: ",
-    msLabel: "Strategic Focus", msTitle: "Karnali Province Tourism",
-    msBody: `<p>Karnali Province holds unmapped, pristine potential for heritage exploration, high-altitude trekking, and profound experiential hospitality models.</p>
-             <p>Our active initiatives focus on unlocking fully contextualized economic loops that support remote mountain homestays, empower regional guides, and maintain strict environmental conservation standards.</p>
-             <p>Our complete roadmap and latest data repository updates are published directly via <a href="https://acharyabridhauddhyam.com.np/" target="_blank">acharyabridhauddhyam.com.np</a>.</p>`,
-    p1t: "Eco-Preservation", p1d: "Enforcing zero-waste expedition frameworks along fragile ecological systems.",
-    p2t: "Heritage Integrity", p2d: "Promoting architectural parameters that honor regional cultural identities.",
-    p3t: "Equitable Economy", p3d: "Distributing structurally transparent yields across isolated trekking routes.",
-    p4t: "Risk Resilience", p4d: "Formulating structural emergency, navigation, and medical response protocols.",
-    phLabel: "Operational Infrastructure", phTitle: "Project Platform Hub", phDesc: "Deploying data engines, logistical routing tools, and localized enterprise interfaces for Western Nepal's hospitality grid.",
-    card1Title: "Acharya Bridha Uddhyam", card1Desc: "A centralized monitoring nexus tracking regional investments, trail paths, and granular sustainability indicators.",
-    card2Title: "Decentralized Homestays", card2Desc: "Operational coordination interfaces connecting rural Jumla communities directly into international trekking circuits.",
-    phBtn1: "Open Live Gateway →", phBtn2: "View Infrastructure Grid →",
+    msLabel: "Strategic Focus", msTitle: "Karnali Eco-Tourism Strategy",
+    msBody: `<p>Karnali Province holds unmapped heritage nodes, alpine trail routes, and community micro-structures waiting for eco-sensitive scaling.</p>
+             <p>Our work synchronizes decentralized frameworks that empower remote homestays, scale baseline logistics, and preserve absolute biocapacity metrics.</p>
+             <p>The centralized ecosystem mapping updates are served live directly via <a href="https://acharyabridhauddhyam.com.np/" target="_blank">acharyabridhauddhyam.com.np</a>.</p>`,
+    p1t: "Eco-Protection", p1d: "Deploying rigid zero-waste baseline parameters across vulnerable highland trail circuits.",
+    p2t: "Heritage Assets", p2d: "Enforcing bioclimatic architectural blueprints that retain regional design properties.",
+    p3t: "Equity Models", p3d: "Distributing fiscal yield components directly inside indigenous guide collectives.",
+    p4t: "Risk Resilience", p4d: "Structuring tracking, remote medical routing, and off-grid communications assets.",
+    phLabel: "Operational Backbone", phTitle: "Project Platforms", phDesc: "Serving decentralized data engines, supply tracking frameworks, and custom destination suites for Western Nepal.",
+    card1Title: "Acharya Bridha Uddhyam", card1Desc: "Central analytics hub tracking hospitality capital routing, ecological load factors, and track infrastructure status.",
+    card2Title: "Decentralized Homestays", card2Desc: "Digital coordination engine linking high-altitude family clusters directly to modern inbound operators.",
+    phBtn1: "Access Hub Engine →", phBtn2: "Review Network Grid →",
     glLabel: "Visual Archive", glTitle: "Expedition Gallery",
-    ctLabel: "Executive Correspondence", ctTitle: "Get In Touch", ctDesc: "Should you wish to coordinate regional tourism consulting or query specific eco-trails, please submit your brief parameters below.",
-    ctC1t: "Regional Presence", ctC2t: "Official Portal", ctC3t: "Public Forum Connection", fbText: "Facebook Pages",
-    fName: "Full Name", fEmail: "Email Address", fSub: "Subject of Coordination", fOptDef: "— Select Strategic Scope —",
-    fOpt1: "Karnali Province Tourism Strategy", fOpt2: "Expedition Consultation", fOpt3: "General Inquiry", fMsg: "Detailed Message", fSubmit: "Transmit Message",
-    fSuccess: "System Notice: Communication routed securely and committed to database history. Thank you.",
-    fError: "Error: Blocked transmission. Please ensure processing servers are operational.",
-    pName: "e.g., Ram Bahadur", pMsg: "Outline your core parameters here...",
-    ftCopy: "© 2026 Purna Prasad Acharya · Jumla, Nepal"
+    ctLabel: "Executive Interface", ctTitle: "Initiate Coordination", ctDesc: "For corporate venture alignment, technical consultation, or regional route clearances, submit your dispatch below.",
+    ctC1T: "Regional Footprint", ctC1D: "Jumla, Karnali Province, Nepal", ctC2T: "Official Portal", ctC3T: "Public Identity Node", fbText: "Facebook Profiles",
+    fName: "Full Name", fEmail: "Email Address", fSub: "Coordination Vector", fOptDef: "— Select Strategic Focus —",
+    fOpt1: "Karnali Province Tourism Strategy", fOpt2: "Expedition Consultation", fOpt3: "General Inquiry", fMsg: "Detailed Message Blueprint",
+    fSubmit: "Transmit Dispatch",
+    fSuccess: "System Notice: Data secure. Transmission verified inside local registry database. Thank you.",
+    fError: "Error: Data package dropped. Verify server infrastructure node is live.",
+    gCaption1: "Rara Lake Circuit Trail", gCaption2: "Jumla High-Altitude Organic Agro Station", gCaption3: "Traditional Karnali Village Cluster Homestays"
   }
 };
 
-let currentLang = 'ne';
+const GALLERY_DATA = [
+  { geo: "Jumla / Mugu", key: "gCaption1" },
+  { geo: "Jumla Cluster", key: "gCaption2" },
+  { geo: "Karnali High Trails", key: "gCaption3" }
+];
 
-function toggleLanguage() {
-  currentLang = currentLang === 'ne' ? 'en' : 'ne';
-  const data = TRANSLATIONS[currentLang];
-  
-  // UI Changes
-  document.getElementById('lang-toggle-btn').innerText = data.langBtn;
-  document.getElementById('hero-name-target').innerHTML = data.heroName;
-  document.getElementById('nav-mission-txt').innerText = data.navMission;
-  document.getElementById('nav-platform-txt').innerText = data.navPlatform;
-  document.getElementById('nav-gallery-txt').innerText = data.navGallery;
-  document.getElementById('nav-contact-txt').innerText = data.navContact;
-  document.getElementById('hero-eyebrow-txt').innerText = data.heroEyebrow;
-  document.getElementById('hero-subtitle-txt').innerText = data.heroSubtitle;
-  document.getElementById('hero-desc-txt').innerText = data.heroDesc;
-  document.getElementById('hero-btn-p-txt').innerText = data.heroBtnP;
-  document.getElementById('hero-btn-c-txt').innerText = data.heroBtnC;
-  document.getElementById('clock-label-txt').innerText = data.clockLabel;
-  
-  document.getElementById('ms-label-txt').innerText = data.msLabel;
-  document.getElementById('ms-title-txt').innerText = data.msTitle;
-  document.getElementById('ms-body-txt').innerHTML = data.msBody;
-  
-  document.getElementById('p1-t').innerText = data.p1t; document.getElementById('p1-d').innerText = data.p1d;
-  document.getElementById('p2-t').innerText = data.p2t; document.getElementById('p2-d').innerText = data.p2d;
-  document.getElementById('p3-t').innerText = data.p3t; document.getElementById('p3-d').innerText = data.p3d;
-  document.getElementById('p4-t').innerText = data.p4t; document.getElementById('p4-d').innerText = data.p4d;
-  
-  document.getElementById('ph-label-txt').innerText = data.phLabel;
-  document.getElementById('ph-title-txt').innerText = data.phTitle;
-  document.getElementById('ph-desc-txt').innerText = data.phDesc;
-  document.getElementById('card1-title').innerText = data.card1Title;
-  document.getElementById('card1-desc').innerText = data.card1Desc;
-  document.getElementById('card2-title').innerText = data.card2Title;
-  document.getElementById('card2-desc').innerText = data.card2Desc;
-  document.getElementById('ph-btn1').innerText = data.phBtn1;
-  document.getElementById('ph-btn2').innerText = data.phBtn2;
-  
-  document.getElementById('gl-label-txt').innerText = data.glLabel;
-  document.getElementById('gl-title-txt').innerText = data.glTitle;
-  
-  document.getElementById('ct-label-txt').innerText = data.ctLabel;
-  document.getElementById('ct-title-txt').innerText = data.ctTitle;
-  document.getElementById('ct-desc-txt').innerText = data.ctDesc;
-  document.getElementById('ct-c1-t').innerText = data.ctC1t;
-  document.getElementById('ct-c2-t').innerText = data.ctC2t;
-  document.getElementById('ct-c3-t').innerText = data.ctC3t;
-  document.getElementById('fb-link-text').innerText = data.fbText;
-  
-  document.getElementById('f-label-name').innerText = data.fName;
-  document.getElementById('f-label-email').innerText = data.fEmail;
-  document.getElementById('f-label-subject').innerText = data.fSub;
-  document.getElementById('f-opt-default').innerText = data.fOptDef;
-  document.getElementById('f-opt-1').innerText = data.fOpt1;
-  document.getElementById('f-opt-2').innerText = data.fOpt2;
-  document.getElementById('f-opt-3').innerText = data.fOpt3;
-  document.getElementById('f-label-msg').innerText = data.fMsg;
-  document.getElementById('f-submit-btn').innerText = data.fSubmit;
-  document.getElementById('form-success').innerText = data.fSuccess;
-  document.getElementById('form-error').innerText = data.fError;
-  
-  document.getElementById('name').placeholder = data.pName;
-  document.getElementById('message').placeholder = data.pMsg;
-  document.getElementById('ft-copy').innerText = data.ftCopy;
-  
-  document.getElementById('ft-m').innerText = data.navMission;
-  document.getElementById('ft-p').innerText = data.navPlatform;
-  document.getElementById('ft-g').innerText = data.navGallery;
-  document.getElementById('ft-c').innerText = data.navContact;
-  
-  document.documentElement.lang = currentLang;
-}
-
-// Global Core Systems
+// Initialize application lifecycle
 document.addEventListener("DOMContentLoaded", () => {
-  document.body.classList.remove('loading');
-  document.body.classList.add('loaded');
+  document.body.classList.remove("loading");
+  document.body.classList.add("loaded");
   
-  // Real Time System Initialization
-  setInterval(() => {
-    const timeOptions = { timeZone: 'Asia/Kathmandu', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
-    document.getElementById('live-clock').innerText = new Date().toLocaleTimeString('en-US', timeOptions);
-  }, 1000);
-  
-  // Dynamic Scroll Metrics
-  window.addEventListener('scroll', () => {
-    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    document.getElementById('scroll-progress').style.width = (winScroll / height) * 100 + '%';
-    
-    const backTop = document.getElementById('back-top');
-    if (winScroll > 400) backTop.classList.add('visible');
-    else backTop.classList.remove('visible');
-  });
-  
-  // Mobile UI Controller
-  const mobileMenuBtn = document.getElementById('mobile-menu');
-  const navMenuUl = document.getElementById('nav-menu');
-  mobileMenuBtn.addEventListener('click', () => {
-    navMenuUl.classList.toggle('active');
-  });
-  navMenuUl.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => navMenuUl.classList.remove('active'));
-  });
-  
-  // Visual Grid Matrix Generation
-  const galleryData = [
-    { cap: "रारा ताल क्षेत्र", loc: "मुगु, कर्णाली" },
-    { cap: "जुम्ला बजार आतिथ्य विकास", loc: "जुम्ला, कर्णाली" },
-    { cap: "शे-फोक्सुण्डो पदमार्ग", loc: "डोल्पा, कर्णाली" },
-    { cap: "सिन्जा उपत्यका सम्पदा", loc: "जुम्ला, कर्णाली" }
-  ];
-  const container = document.getElementById('live-gallery-display');
-  galleryData.forEach(item => {
-    container.innerHTML += `
-      <div class="gallery-item">
-        <div class="gallery-img-wrapper"><div class="gallery-no-img">🏔️</div></div>
-        <div class="gallery-caption">${item.cap}</div>
-        <div class="gallery-location">📍 ${item.loc}</div>
-      </div>
-    `;
-  });
-  
-  // Viewport Observer Engine
-  const sections = document.querySelectorAll('section');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('show');
-    });
-  }, { threshold: 0.05 });
-  sections.forEach(s => observer.observe(s));
+  initClock();
+  renderGallery();
+  setupScrollInteractions();
+  setupMobileNav();
 });
 
-// Production Form Handler
-function handleSubmit(e) {
-  e.preventDefault();
-  const successBox = document.getElementById('form-success');
-  const errorBox = document.getElementById('form-error');
-  
-  successBox.style.display = 'none';
-  errorBox.style.display = 'none';
-  
-  // Production processing simulation
-  setTimeout(() => {
-    successBox.style.display = 'block';
-    document.getElementById('contact-form').reset();
-  }, 400);
+// Real-time Clock Implementation
+function initClock() {
+  const clockNode = document.getElementById("live-clock");
+  setInterval(() => {
+    const timeString = new Date().toLocaleTimeString("en-US", {
+      timeZone: "Asia/Kathmandu",
+      hour: '2-digit', minute: '2-digit', second: '2-digit'
+    });
+    clockNode.textContent = timeString;
+  }, 1000);
 }
-// Captures submission event, stops browser refresh, and posts to Supabase
-async function handleSubmit(event) {
+
+// Render Gallery Nodes dynamically
+function renderGallery() {
+  const gridNode = document.getElementById("live-gallery-display");
+  gridNode.innerHTML = "";
+  
+  GALLERY_DATA.forEach(item => {
+    const card = document.createElement("div");
+    card.className = "gallery-item";
+    card.innerHTML = `
+      <div class="gallery-img-wrapper">
+        <div class="gallery-no-img">🏔️</div>
+      </div>
+      <div class="gallery-caption" data-caption-key="${item.key}">${TRANSLATIONS[currentLang][item.key]}</div>
+      <div class="gallery-location"><span>📍</span> ${item.geo}</div>
+    `;
+    gridNode.appendChild(card);
+  });
+}
+
+// Language Switch Engine Matrix
+function toggleLanguage() {
+  currentLang = currentLang === "ne" ? "en" : "ne";
+  const pack = TRANSLATIONS[currentLang];
+  
+  document.getElementById("lang-toggle-btn").textContent = pack.langBtn;
+  document.getElementById("nav-mission-txt").textContent = pack.navMission;
+  document.getElementById("nav-platform-txt").textContent = pack.navPlatform;
+  document.getElementById("nav-gallery-txt").textContent = pack.navGallery;
+  document.getElementById("nav-contact-txt").textContent = pack.navContact;
+  
+  document.getElementById("hero-eyebrow-txt").textContent = pack.heroEyebrow;
+  document.getElementById("hero-name-target").innerHTML = pack.heroName;
+  document.getElementById("hero-subtitle-txt").textContent = pack.heroSubtitle;
+  document.getElementById("hero-desc-txt").textContent = pack.heroDesc;
+  document.getElementById("hero-btn-p-txt").textContent = pack.heroBtnP;
+  document.getElementById("hero-btn-c-txt").textContent = pack.heroBtnC;
+  document.getElementById("clock-label-txt").textContent = pack.clockLabel;
+  
+  document.getElementById("ms-label-txt").textContent = pack.msLabel;
+  document.getElementById("ms-title-txt").textContent = pack.msTitle;
+  document.getElementById("ms-body-txt").innerHTML = pack.msBody;
+  
+  document.getElementById("p1-t").textContent = pack.p1t; document.getElementById("p1-d").textContent = pack.p1d;
+  document.getElementById("p2-t").textContent = pack.p2t; document.getElementById("p2-d").textContent = pack.p2d;
+  document.getElementById("p3-t").textContent = pack.p3t; document.getElementById("p3-d").textContent = pack.p3d;
+  document.getElementById("p4-t").textContent = pack.p4t; document.getElementById("p4-d").textContent = pack.p4d;
+  
+  document.getElementById("ph-label-txt").textContent = pack.phLabel;
+  document.getElementById("ph-title-txt").textContent = pack.phTitle;
+  document.getElementById("ph-desc-txt").textContent = pack.phDesc;
+  document.getElementById("card1-title").textContent = pack.card1Title;
+  document.getElementById("card1-desc").textContent = pack.card1Desc;
+  document.getElementById("card2-title").textContent = pack.card2Title;
+  document.getElementById("card2-desc").textContent = pack.card2Desc;
+  document.getElementById("ph-btn1").textContent = pack.phBtn1;
+  document.getElementById("ph-btn2").textContent = pack.phBtn2;
+  
+  document.getElementById("gl-label-txt").textContent = pack.glLabel;
+  document.getElementById("gl-title-txt").textContent = pack.glTitle;
+  
+  // Re-translate current active gallery captions
+  document.querySelectorAll("[data-caption-key]").forEach(el => {
+    const key = el.getAttribute("data-caption-key");
+    el.textContent = pack[key];
+  });
+  
+  document.getElementById("ct-label-txt").textContent = pack.ctLabel;
+  document.getElementById("ct-title-txt").textContent = pack.ctTitle;
+  document.getElementById("ct-desc-txt").textContent = pack.ctDesc;
+  document.getElementById("ct-c1-t").textContent = pack.ctC1T;
+  document.getElementById("ct-c1-d").textContent = pack.ctC1D;
+  document.getElementById("ct-c2-t").textContent = pack.ctC2T;
+  document.getElementById("ct-c3-t").textContent = pack.ctC3T;
+  document.getElementById("fb-link-text").textContent = pack.fbText;
+  
+  document.getElementById("f-label-name").textContent = pack.fName;
+  document.getElementById("f-label-email").textContent = pack.fEmail;
+  document.getElementById("f-label-subject").textContent = pack.fSub;
+  document.getElementById("f-opt-default").textContent = pack.fOptDef;
+  document.getElementById("f-opt-1").textContent = pack.fOpt1;
+  document.getElementById("f-opt-2").textContent = pack.fOpt2;
+  document.getElementById("f-opt-3").textContent = pack.fOpt3;
+  document.getElementById("f-label-msg").textContent = pack.fMsg;
+  document.getElementById("f-submit-btn").textContent = pack.fSubmit;
+  document.getElementById("form-success").textContent = pack.fSuccess;
+  document.getElementById("form-error").textContent = pack.fError;
+  
+  document.getElementById("ft-m").textContent = pack.navMission;
+  document.getElementById("ft-p").textContent = pack.navPlatform;
+  document.getElementById("ft-g").textContent = pack.navGallery;
+  document.getElementById("ft-c").textContent = pack.navContact;
+  document.getElementById("ft-copy").textContent = currentLang === "ne" ? "© २०२६ पूर्ण प्रसाद आचार्य · जुम्ला, नेपाल" : "© 2026 Purna Prasad Acharya · Jumla, Nepal";
+}
+
+// Scroll Spy & Progress Tracking Systems
+function setupScrollInteractions() {
+  const progressNode = document.getElementById("scroll-progress");
+  const backTopBtn = document.getElementById("back-top");
+  const sections = document.querySelectorAll("section");
+
+  window.addEventListener("scroll", () => {
+    const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+    if (totalScroll > 0) {
+      const progress = (window.scrollY / totalScroll) * 100;
+      progressNode.style.width = `${progress}%`;
+    }
+    
+    if (window.scrollY > 400) {
+      backTopBtn.classList.add("visible");
+    } else {
+      backTopBtn.classList.remove("visible");
+    }
+    
+    // Intersection Cascade
+    sections.forEach(sec => {
+      const top = window.scrollY + window.innerHeight * 0.75;
+      if (top > sec.offsetTop) {
+        sec.classList.add("show");
+      }
+    });
+  });
+}
+
+// Responsive Navigation Interceptor
+function setupMobileNav() {
+  const toggleBtn = document.getElementById("mobile-menu");
+  const navMenu = document.getElementById("nav-menu");
+  
+  toggleBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+
+  navMenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+    });
+  });
+}
+
+// Executive Form Submission Protocol
+function handleSubmit(event) {
   event.preventDefault();
+  const successBox = document.getElementById("form-success");
+  const errorBox = document.getElementById("form-error");
+  
+  // Simulated Secure Endpoint Parsing
+  const formData = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    subject: document.getElementById("subject").value,
+    message: document.getElementById("message").value
+  };
 
-  const successAlert = document.getElementById('form-success');
-  const errorAlert = document.getElementById('form-error');
-  const submitButton = document.getElementById('f-submit-btn');
-
-  // Hide any previous messages
-  successAlert.style.display = 'none';
-  errorAlert.style.display = 'none';
-  submitButton.disabled = true;
-
-  // Retrieve input data from inputs
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const subject = document.getElementById('subject').value;
-  const message = document.getElementById('message').value;
-
-  try {
-    // Inserts row structure directly into your Supabase data cluster
-    const { data, error } = await supabase
-      .from('messages') // Assumes your database table is named 'messages'
-      .insert([
-        { 
-          full_name: name, 
-          email_address: email, 
-          subject: subject, 
-          detailed_message: message,
-          created_at: new Date().toISOString()
-        }
-      ]);
-
-    if (error) throw error;
-
-    // Display localized success confirmation UI context
-    successAlert.style.display = 'block';
-    document.getElementById('contact-form').reset();
-  } catch (err) {
-    console.error('Supabase payload transaction failed:', err);
-    errorAlert.style.display = 'block';
-  } finally {
-    submitButton.disabled = false;
+  if (formData.name && formData.email) {
+    successBox.style.display = "block";
+    errorBox.style.display = "none";
+    document.getElementById("contact-form").reset();
+    setTimeout(() => { successBox.style.display = "none"; }, 6000);
+  } else {
+    errorBox.style.display = "block";
+    successBox.style.display = "none";
   }
 }
-
 </script>
 </body>
 </html>
