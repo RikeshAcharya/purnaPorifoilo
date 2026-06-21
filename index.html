@@ -595,7 +595,27 @@
 <button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 
 <script>
-// Dynamic Global State
+// ====== DATABASE INITIALIZATION ======
+// Replace these with your actual Supabase Project credentials
+const SUPABASE_URL = "https://rxsionpqvqdkttmgzsqw.supabase.co"; 
+const SUPABASE_ANON_KEY = "sb_publishable_F_K5A2_cFLC-UkkL05DNhg_eOxaXFlf";
+
+// Inject Supabase Client library dynamically if not loaded via script tag
+if (typeof supabase === 'undefined') {
+  const script = document.createElement('script');
+  script.src = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2";
+  document.head.appendChild(script);
+}
+
+let supabaseClient = null;
+function getSupabase() {
+  if (!supabaseClient && typeof supabase !== 'undefined') {
+    supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  }
+  return supabaseClient;
+}
+
+// ====== DYNAMIC GLOBAL STATE ======
 let currentLang = "ne";
 
 const TRANSLATIONS = {
@@ -615,7 +635,7 @@ const TRANSLATIONS = {
     p3t: "न्यायोचित अर्थतन्त्र", p3d: "दुर्गम क्षेत्रका ट्रेकिङ ट्र्याकहरूमा संरचनात्मक प्रतिफलहरू पारदर्शी रूपमा वितरण गर्ने।",
     p4t: "जोखिम प्रतिरोध", p4d: "दुर्गम मार्गहरूमा सुरक्षा, नेभिगेसन, र चिकित्सा प्रतिक्रियाको आधारभूत मापदण्डहरू तयार गर्ने।",
     phLabel: "परिचालन पूर्वाधार", phTitle: "प्रोजेक्ट प्लेटफर्म", phDesc: "पश्चिम नेपालको आतिथ्य संरचनाका लागि डाटा इन्जिन, लजिस्टिक रुटिङ संयन्त्र, र स्थानीयकृत उद्यम समाधानहरू परिचालन गर्दै.",
-    card1Title: "आचार्य वृद्ध उद्यम", card1Desc: "क्षेत्रीय लगानी, पदमार्ग विकास, र दिगोपनका सूचकहरू ट्र्याक गर्ने केन्द्रीकृत इकोसिस्टम अनुगमन केन्द्र।",
+    card1Title: "आचार्य वृद्ध उद्यम", card1Desc: "क्षेत्रीय लगानी, पदमार्ग विकास, र दिगोपनका सूचकहरू ट्र्याक गर्ने केन्द्रीकृत इकोसिستم अनुगमन केन्द्र।",
     card2Title: "विकेन्द्रीकृत होमस्टेहरू", card2Desc: "जुम्लाका ग्रामीण समुदायहरूलाई सिधै अन्तर्राष्ट्रिय ट्रेकिङ सञ्जालहरूसँग जोड्ने परिचालन समन्वय इन्टरफेस।",
     phBtn1: "लाइभ गेटवे खोल्नुहोस् →", phBtn2: "पूर्वाधार नेटवर्क हेर्नुहोस् →",
     glLabel: "भिजुअल अभिलेख", glTitle: "अभियान ग्यालेरी",
@@ -691,6 +711,7 @@ function initClock() {
 // Render Gallery Nodes dynamically
 function renderGallery() {
   const gridNode = document.getElementById("live-gallery-display");
+  if(!gridNode) return;
   gridNode.innerHTML = "";
   
   GALLERY_DATA.forEach(item => {
@@ -748,7 +769,6 @@ function toggleLanguage() {
   document.getElementById("gl-label-txt").textContent = pack.glLabel;
   document.getElementById("gl-title-txt").textContent = pack.glTitle;
   
-  // Re-translate current active gallery captions
   document.querySelectorAll("[data-caption-key]").forEach(el => {
     const key = el.getAttribute("data-caption-key");
     el.textContent = pack[key];
@@ -782,7 +802,6 @@ function toggleLanguage() {
   document.getElementById("ft-copy").textContent = currentLang === "ne" ? "© २०२६ पूर्ण प्रसाद आचार्य · जुम्ला, नेपाल" : "© 2026 Purna Prasad Acharya · Jumla, Nepal";
 }
 
-// Scroll Spy & Progress Tracking Systems
 function setupScrollInteractions() {
   const progressNode = document.getElementById("scroll-progress");
   const backTopBtn = document.getElementById("back-top");
@@ -801,7 +820,6 @@ function setupScrollInteractions() {
       backTopBtn.classList.remove("visible");
     }
     
-    // Intersection Cascade
     sections.forEach(sec => {
       const top = window.scrollY + window.innerHeight * 0.75;
       if (top > sec.offsetTop) {
@@ -811,7 +829,6 @@ function setupScrollInteractions() {
   });
 }
 
-// Responsive Navigation Interceptor
 function setupMobileNav() {
   const toggleBtn = document.getElementById("mobile-menu");
   const navMenu = document.getElementById("nav-menu");
@@ -827,28 +844,57 @@ function setupMobileNav() {
   });
 }
 
-// Executive Form Submission Protocol
-function handleSubmit(event) {
+// ====== ASYNC SUPABASE LIVE PIPELINE ======
+async function handleSubmit(event) {
   event.preventDefault();
   const successBox = document.getElementById("form-success");
   const errorBox = document.getElementById("form-error");
+  const submitBtn = document.getElementById("f-submit-btn");
   
-  // Simulated Secure Endpoint Parsing
-  const formData = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
+  // Hide previous feedback statuses
+  successBox.style.display = "none";
+  errorBox.style.display = "none";
+  
+  const client = getSupabase();
+  if (!client) {
+    errorBox.textContent = "Supabase SDK is still initializing. Please wait a moment and try again.";
+    errorBox.style.display = "block";
+    return;
+  }
+
+  // Visual submission feedback state
+  submitBtn.disabled = true;
+  const originalBtnText = submitBtn.textContent;
+  submitBtn.textContent = currentLang === "ne" ? "पठाउँदै..." : "Transmitting...";
+
+  // Map fields exactly to your database schema names
+  const payload = {
+    name: document.getElementById("name").value.trim(),
+    email: document.getElementById("email").value.trim(),
     subject: document.getElementById("subject").value,
-    message: document.getElementById("message").value
+    message: document.getElementById("message").value.trim()
   };
 
-  if (formData.name && formData.email) {
+  try {
+    // Crucial: Replace 'your_table_name' with your exact Supabase table name
+    const { error } = await client
+      .from('your_table_name') 
+      .insert([payload]);
+
+    if (error) throw error;
+
+    // Trigger explicit Success Matrix UI
     successBox.style.display = "block";
-    errorBox.style.display = "none";
     document.getElementById("contact-form").reset();
-    setTimeout(() => { successBox.style.display = "none"; }, 6000);
-  } else {
+    setTimeout(() => { successBox.style.display = "none"; }, 7000);
+
+  } catch (err) {
+    console.error("Supabase Payload Error Diagnostics:", err);
+    errorBox.textContent = `${TRANSLATIONS[currentLang].fError} (${err.message || err})`;
     errorBox.style.display = "block";
-    successBox.style.display = "none";
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalBtnText;
   }
 }
 </script>
