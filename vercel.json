@@ -1,23 +1,6 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "gallery/**/*",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "gallery-list.json",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+    { "src": "**/*", "use": "@vercel/static" }
   ]
 }
